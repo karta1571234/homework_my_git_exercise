@@ -1,12 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Clock from './App';
+import Comment from './App1';
 import reportWebVitals from './reportWebVitals';
 
+const comment = {
+  date: new Date(),
+  text: 'I hope you enjoy learning React!',
+  author: {
+    name: 'Hello Kitty',
+    avatarUrl: 'https://placekitten.com/g/64/64',
+  },
+};
 
 ReactDOM.render(
-  <Clock />,
+  <Comment
+    date={comment.date}
+    text={comment.text}
+    author={comment.author}
+  />,
   document.getElementById('root')
 );
 
